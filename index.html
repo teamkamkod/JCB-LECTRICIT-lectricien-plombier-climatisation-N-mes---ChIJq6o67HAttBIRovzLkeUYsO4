@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JCB ÉLECTRICITÉ — électricien — Nîmes</title>
+  <meta name="description" content="JCB ÉLECTRICITÉ à Nîmes : électricien fiable et réactif pour vos installations et dépannages électriques. Devis gratuit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #2A3D4C;
+      --secondary: #F7B32B;
+      --background: #F9FAFB;
+      --text: #23272A;
+      --cta: #E94F37;
+      --radius: 4px;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+      --section-padding: 64px 16px;
+      --transition: 0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--background);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-heading); }
+
+    img { max-width: 100%; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── FADE IN ANIMATION ── */
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none !important;
+    }
+
+    /* ── NAV ── */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: var(--primary);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(0.9rem, 3vw, 1.15rem);
+      color: #fff;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+    }
+
+    .nav-logo span { color: var(--secondary); }
+
+    .nav-links {
+      display: none;
+      list-style: none;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links li a {
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      transition: color var(--transition);
+    }
+
+    .nav-links li a:hover { color: var(--secondary); }
+
+    .nav-cta-btn {
+      background: var(--cta);
+      color: #fff !important;
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      transition: background var(--transition) !important;
+    }
+
+    .nav-cta-btn:hover { background: #c93e2c !important; }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--primary);
+      padding: 16px;
+      gap: 12px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-menu.open { display: flex; }
+
+    .mobile-menu a {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color var(--transition);
+    }
+
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--secondary); }
+
+    @media (min-width: 768px) {
+      .hamburger { display: none; }
+      .nav-links { display: flex; }
+      .mobile-menu { display: none !important; }
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--primary) 0%, #1a2a36 60%, #0f1c26 100%);
+      display: flex;
+      align-items: center;
+      padding-top: 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F7B32B' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content { max-width: 640px; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(247, 179, 43, 0.15);
+      border: 1px solid rgba(247, 179, 43, 0.4);
+      color: var(--secondary);
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+    }
+
+    .hero-badge::before {
+      content: '⚡';
+      font-size: 0.85rem;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(1.6rem, 5vw, 3.8rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-content h1 .highlight { color: var(--secondary); }
+
+    .hero-content p {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: var(--cta);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 16px 28px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      letter-spacing: 0.03em;
+      display: inline-block;
+      box-shadow: 0 4px 16px rgba(233,79,55,0.4);
+    }
+
+    .btn-primary:hover {
+      background: #c93e2c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(233,79,55,0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      border: 2px solid rgba(255,255,255,0.4);
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      transition: all var(--transition);
+      letter-spacing: 0.03em;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--secondary);
+      color: var(--secondary);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat {
+      text-align: left;
+    }
+
+    .hero-stat-number {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--secondary);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    .hero-visual {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .hero-inner {
+        flex-direction: row;
+        align-items: center;
+        padding: 48px 24px;
+      }
+
+      .hero-buttons {
+        flex-direction: row;
+        width: auto;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: auto;
+      }
+
+      .hero-visual {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+      }
+
+      .hero-visual-box {
+        width: 100%;
+        max-width: 480px;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(247,179,43,0.2);
+        border-radius: 8px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .visual-card {
+        background: rgba(255,255,255,0.08);
+        border-radius: 4px;
+        padding: 20px 16px;
+        text-align: center;
+        border: 1px solid rgba(255,255,255,0.08);
+        transition: background var(--transition);
+      }
+
+      .visual-card:hover { background: rgba(247,179,43,0.12); }
+
+      .visual-card-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .visual-card-label {
+        font-family: var(--font-heading);
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: rgba(255,255,255,0.8);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-content { flex: 1; }
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: var(--section-padding); }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--secondary);
+      background: rgba(247,179,43,0.1);
+      padding: 4px 12px;
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      color: #555;
+      line-height: 1.7;
+      max-width: 640px;
+    }
+
+    .section-header { margin-bottom: 48px; }
+    .section-header.centered { text-align: center; }
+    .section-header.centered .section-subtitle { margin: 0 auto; }
+
+    /* ── SERVICES ── */
+    #services {
+      background: #fff;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--background);
+      border: 1px solid rgba(42,61,76,0.08);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--secondary);
+      border-radius: var(--radius) 0 0 var(--radius);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(42,61,76,0.12);
+      border-color: rgba(247,179,43,0.3);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(247,179,43,0.12);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.65;
+    }
+
+    @media (min-width: 600px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* ── ZONE INTERVENTION ── */
+    #zone-intervention {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    #zone-intervention .section-title { color: #fff; }
+    #zone-intervention .section-tag { color: var(--secondary); background: rgba(247,179,43,0.15); }
+
+    .zone-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .zone-text p {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .zone-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .zone-pill {
+      background: rgba(247,179,43,0.15);
+      border: 1px solid rgba(247,179,43,0.3);
+      color: var(--secondary);
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: var(--radius);
+    }
+
+    .zone-map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      width: 100%;
+      height: 320px;
+      border: 2px solid rgba(247,179,43,0.2);
+    }
+
+    .zone-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (min-width: 768px) {
+      .zone-grid { grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    }
+
+    /* ── AVIS CLIENTS ── */
+    #avis-clients {
+      background: var(--background);
+    }
+
+    .reviews-empty {
+      background: #fff;
+      border: 2px dashed rgba(42,61,76,0.15);
+      border-radius: var(--radius);
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    .reviews-empty p {
+      color: #888;
+      font-size: 0.95rem;
+    }
+
+    .reviews-cta-box {
+      background: linear-gradient(135deg, var(--primary), #1a2a36);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .reviews-cta-box h3 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .reviews-cta-box p {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+
+    .btn-google {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 24px;
+      border-radius: var(--radius);
+      transition: all var(--transition);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 100%;
+      justify-content: center;
+    }
+
+    .btn-google:hover {
+      background: var(--secondary);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    @media (min-width: 768px) {
+      .btn-google { width: auto; }
+    }
+
+    /* ── PRESENTATION ── */
+    #presentation {
+      background: #fff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-text p {
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .feature-check {
+      width: 22px;
+      height: 22px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: #fff;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .about-feature span {
+      font-size: 0.88rem;
+      color: var(--primary);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .about-visual {
+      background: linear-gradient(135deg, var(--primary) 0%, #1a2a36 100%);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .about-stat-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .about-stat-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .about-stat-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .about-stat-info strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--secondary);
+    }
+
+    .about-stat-info span {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    @media (min-width: 768px) {
+      .about-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ── GARANTIES ── */
+    #garanties {
+      background: var(--background);
+    }
+
+    .garanties-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .garantie-card {
+      background: #fff;
+      border: 1px solid rgba(42,61,76,0.08);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+
+    .garantie-card:hover {
+      box-shadow: 0 8px 24px rgba(42,61,76,0.1);
+      transform: translateY(-2px);
+    }
+
+    .garantie-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), #1a2a36);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .garantie-body h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .garantie-body p {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 600px) {
+      .garanties-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 1024px) {
+      .garanties-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* ── CONTACT RAPIDE ── */
+    #contact-rapide {
+      background: #fff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .contact-info-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--background);
+      border-radius: var(--radius);
+      padding: 20px;
+      border: 1px solid rgba(42,61,76,0.07);
+    }
+
+    .contact-info-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--primary);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info-detail strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .contact-info-detail a,
+    .contact-info-detail span {
+      font-size: 0.92rem;
+      color: #555;
+      transition: color var(--transition);
+    }
+
+    .contact-info-detail a:hover { color: var(--cta); }
+
+    .contact-form-box { display: flex; flex-direction: column; gap: 16px; }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+    .form-group label {
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--text);
+      background: var(--background);
+      border: 1.5px solid rgba(42,61,76,0.18);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      width: 100%;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 3px rgba(247,179,43,0.15);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .form-row { grid-template-columns: 1fr 1fr; }
+    }
+
+    .btn-submit {
+      background: var(--cta);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      letter-spacing: 0.04em;
+      box-shadow: 0 4px 14px rgba(233,79,55,0.35);
+    }
+
+    .btn-submit:hover {
+      background: #c93e2c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(233,79,55,0.45);
+    }
+
+    @media (min-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr 1.4fr; gap: 56px; }
+      .btn-submit { width: auto; }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.75);
+      padding: 48px 16px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand .nav-logo {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--secondary);
+      margin-bottom: 16px;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      display: block;
+      transition: color var(--transition);
+    }
+
+    .footer-col a:hover { color: var(--secondary); }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 24px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .footer-gmaps-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(247,179,43,0.12);
+      border: 1px solid rgba(247,179,43,0.25);
+      color: var(--secondary) !important;
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background var(--transition);
+    }
+
+    .footer-gmaps-link:hover { background: rgba(247,179,43,0.22); }
+
+    @media (min-width: 768px) {
+      footer { padding: 64px 24px 32px; }
+      .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
+      .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+
+    /* ── SCROLL TO TOP ── */
+    #scroll-top {
+      position: fixed;
+      bottom: 28px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      background: var(--cta);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(233,79,55,0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 900;
+    }
+
+    #scroll-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #scroll-top:hover { background: #c93e2c; }
+
+    /* ── DIVIDER ── */
+    .wave-divider {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      margin-bottom: -2px;
+    }
+
+    /* ── PHONE FLOAT ── */
+    .phone-float {
+      position: fixed;
+      bottom: 28px;
+      left: 20px;
+      z-index: 900;
+    }
+
+    .phone-float a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 14px rgba(42,61,76,0.35);
+      transition: background var(--transition), transform var(--transition);
+      border: 1px solid rgba(247,179,43,0.25);
+    }
+
+    .phone-float a:hover {
+      background: #1a2a36;
+      transform: translateY(-2px);
+    }
+
+    .phone-pulse {
+      width: 10px;
+      height: 10px;
+      background: #4caf50;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(76,175,80,0.5); }
+      50% { box-shadow: 0 0 0 6px rgba(76,175,80,0); }
+    }
+
+    @media (min-width: 768px) {
+      .phone-float a { font-size: 0.9rem; padding: 12px 20px; }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">JCB <span>ÉLECTRICITÉ</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#zone-intervention">Zone</a></li>
+        <li><a href="#avis-clients">Avis</a></li>
+        <li><a href="#presentation">À propos</a></li>
+        <li><a href="#garanties">Garanties</a></li>
+        <li><a href="#contact-rapide" class="nav-cta-btn">Devis gratuit</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="#zone-intervention" onclick="closeMobile()">Zone d'intervention</a>
+    <a href="#avis-clients" onclick="closeMobile()">Avis Clients</a>
+    <a href="#presentation" onclick="closeMobile()">À propos</a>
+    <a href="#garanties" onclick="closeMobile()">Garanties</a>
+    <a href="#contact-rapide" onclick="closeMobile()">Devis gratuit</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-content fade-in">
+      <div class="hero-badge">Électricien certifié — Nîmes & Gard</div>
+      <h1>Électricien de <span class="highlight">confiance</span> à Nîmes</h1>
+      <p>Interventions rapides et efficaces pour tous vos besoins électriques. Devis gratuit sous 24h.</p>
+      <div class="hero-buttons">
+        <a href="#contact-rapide" class="btn-primary">Demander un devis</a>
+        <a href="#services" class="btn-secondary">En savoir plus</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-visual-box">
+        <div class="visual-card">
+          <div class="visual-card-icon">⚡</div>
+          <div class="visual-card-label">Dépannage Urgent</div>
+        </div>
+        <div class="visual-card">
+          <div class="visual-card-icon">🔌</div>
+          <div class="visual-card-label">Installation</div>
+        </div>
+        <div class="visual-card">
+          <div class="visual-card-icon">📋</div>
+          <div class="visual-card-label">Mise aux Normes</div>
+        </div>
+        <div class="visual-card">
+          <div class="visual-card-icon">🏠</div>
+          <div class="visual-card-label">Domotique</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Ce que nous faisons</span>
+      <h2 class="section-title">Nos Services</h2>
+      <p class="section-subtitle">Des solutions électriques professionnelles adaptées à vos besoins, réalisées par des experts certifiés.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">⚡</div>
+        <h3>Dépannage électrique</h3>
+        <p>Interventions rapides pour résoudre vos urgences électriques.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🔌</div>
+        <h3>Installation électrique</h3>
+        <p>Mise en place de systèmes électriques modernes et sécurisés.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">📋</div>
+        <h3>Mise aux normes</h3>
+        <p>Assurez-vous que vos installations respectent les dernières normes.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">🏠</div>
+        <h3>Domotique</h3>
+        <p>Automatisez votre maison pour plus de confort et de sécurité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONE INTERVENTION -->
+<section id="zone-intervention">
+  <div class="section-inner">
+    <div class="zone-grid">
+      <div class="zone-text fade-in">
+        <span class="section-tag">Déplacements</span>
+        <h2 class="section-title" style="color:#fff;">Zone d'intervention</h2>
+        <p>JCB ÉLECTRICITÉ intervient à Nîmes et dans tout le département du Gard. Que vous soyez en ville ou en zone rurale, nous nous déplaçons chez vous rapidement pour répondre à vos besoins électriques.</p>
+        <div class="zone-list">
+          <span class="zone-pill">Nîmes</span>
+          <span class="zone-pill">Gard (30)</span>
+          <span class="zone-pill">Alès</span>
+          <span class="zone-pill">Bagnols-sur-Cèze</span>
+          <span class="zone-pill">Beaucaire</span>
+          <span class="zone-pill">Pont-Saint-Esprit</span>
+          <span class="zone-pill">Uzès</span>
+          <span class="zone-pill">Le Vigan</span>
+        </div>
+        <a href="tel:+33667693343" class="btn-primary" style="width:auto;display:inline-block;">📞 Appeler maintenant</a>
+      </div>
+      <div class="zone-map fade-in">
+        <iframe
+          src="https://maps.google.com/maps?q=43.8495937,4.3633904&z=16&output=embed"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          title="JCB ÉLECTRICITÉ — Nîmes">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section id="avis-clients">
+  <div class="section-inner">
+    <div class="section-header centered">
+      <span class="section-tag">Satisfaction Client</span>
+      <h2 class="section-title">Avis Clients</h2>
+      <p class="section-subtitle">La confiance de nos clients est notre meilleure récompense. Découvrez ce qu'ils disent de nous.</p>
+    </div>
+    <div class="reviews-cta-box fade-in">
+      <h3>Votre avis compte pour nous !</h3>
+      <p>Vous avez fait appel à JCB ÉLECTRICITÉ ? Partagez votre expérience sur Google et aidez d'autres clients à faire le bon choix.</p>
+      <a href="https://search.google.com/local/writereview?placeid=ChIJq6o67HAttBIRovzLkeUYsO4" target="_blank" rel="noopener" class="btn-google">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Laisser un avis Google
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRESENTATION -->
+<section id="presentation">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <span class="section-tag">Qui sommes-nous</span>
+        <h2 class="section-title">À propos de JCB ÉLECTRICITÉ</h2>
+        <p>JCB ÉLECTRICITÉ est votre partenaire de confiance pour tous vos travaux électriques à Nîmes et dans le Gard. Notre équipe d'experts certifiés est dédiée à fournir des services de qualité, que ce soit pour des installations, des dépannages ou des mises aux normes.</p>
+        <p>Nous sommes fiers de notre réactivité et de notre engagement à assurer la sécurité électrique de votre domicile ou de votre entreprise.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>Experts certifiés</span>
+          </div>
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>Devis gratuit</span>
+          </div>
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>Interventions rapides</span>
+          </div>
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>Travaux garantis</span>
+          </div>
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>Prix transparents</span>
+          </div>
+          <div class="about-feature">
+            <div class="feature-check">✓</div>
+            <span>Sécurité maximale</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual fade-in">
+        <div class="about-stat-row">
+          <div class="about-stat-icon">⚡</div>
+          <div class="about-stat-info">
+            <strong>100%</strong>
+            <span>Satisfaction client garantie</span>
+          </div>
+        </div>
+        <div class="about-stat-row">
+          <div class="about-stat-icon">🏆</div>
+          <div class="about-stat-info">
+            <strong>Certifiés</strong>
+            <span>Électriciens qualifiés et assurés</span>
+          </div>
+        </div>
+        <div class="about-stat-row">
+          <div class="about-stat-icon">📍</div>
+          <div class="about-stat-info">
+            <strong>Nîmes & Gard</strong>
+            <span>Intervention locale rapide</span>
+          </div>
+        </div>
+        <div class="about-stat-row">
+          <div class="about-stat-icon">📞</div>
+          <div class="about-stat-info">
+            <strong>Devis gratuit</strong>
+            <span>Réponse sous 24 heures</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIES -->
+<section id="garanties">
+  <div class="section-inner">
+    <div class="section-header centered">
+      <span class="section-tag">Nos engagements</span>
+      <h2 class="section-title">Pourquoi nous choisir ?</h2>
+      <p class="section-subtitle">JCB ÉLECTRICITÉ s'engage à vous offrir un service fiable, sécurisé et transparent à chaque intervention.</p>
+    </div>
+    <div class="garanties-grid">
+      <div class="garantie-card fade-in">
+        <div class="garantie-icon">🚀</div>
+        <div class="garantie-body">
+          <h3>Réactivité</h3>
+          <p>Intervention rapide pour vos urgences électriques, disponible 6j/7 dans tout le Gard.</p>
+        </div>
+      </div>
+      <div class="garantie-card fade-in">
+        <div class="garantie-icon">🛡️</div>
+        <div class="garantie-body">
+          <h3>Sécurité garantie</h3>
+          <p>Toutes nos installations respectent les normes NF C 15-100 pour votre sécurité absolue.</p>
+        </div>
+      </div>
+      <div class="garantie-card fade-in">
+        <div class="garantie-icon">💰</div>
+        <div class="garantie-body">
+          <h3>Devis gratuit</h3>
+          <p>Estimation transparente et sans engagement. Aucune surprise sur votre facture finale.</p>
+        </div>
+      </div>
+      <div class="garantie-card fade-in">
+        <div class="garantie-icon">🏅</div>
+        <div class="garantie-body">
+          <h3>Expertise certifiée</h3>
+          <p>Équipe de professionnels qualifiés et assurés pour tous types de travaux électriques.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT RAPIDE -->
+<section id="contact-rapide">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Parlons-en</span>
+      <h2 class="section-title">Contactez-nous</h2>
+      <p class="section-subtitle">Remplissez le formulaire pour toute demande d'information ou de devis. Nous vous répondons dans les 24h.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info-box fade-in">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📞</div>
+          <div class="contact-info-detail">
+            <strong>Téléphone</strong>
+            <a href="tel:+33667693343">+33 6 67 69 33 43</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">📍</div>
+          <div class="contact-info-detail">
+            <strong>Adresse</strong>
+            <span>273 Chem. du Mas du Diable<br>30000 Nîmes, France</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">🗺️</div>
+          <div class="contact-info-detail">
+            <strong>Zone d'intervention</strong>
+            <span>Nîmes et tout le département du Gard (30)</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">⏰</div>
+          <div class="contact-info-detail">
+            <strong>Disponibilité</strong>
+            <span>Du lundi au samedi<br>Urgences disponibles</span>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=273+Chem.+du+Mas+du+Diable+30000+Nîmes+France" target="_blank" rel="noopener" class="btn-primary" style="text-align:center;">
+          📍 Voir sur Google Maps
+        </a>
+      </div>
+      <form action="#" method="POST" class="contact-form-box fade-in" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Nom complet *</label>
+            <input type="text" id="contact-name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Téléphone *</label>
+            <input type="tel" id="contact-phone" name="phone" placeholder="Votre numéro" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="votre@email.com">
+        </div>
+        <div class="form-group">
+          <label for="contact-service">Type de prestation</label>
+          <select id="contact-service" name="service">
+            <option value="">Sélectionnez une prestation</option>
+            <option value="depannage">Dépannage électrique</option>
+            <option value="installation">Installation électrique</option>
+            <option value="normes">Mise aux normes</option>
+            <option value="domotique">Domotique</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Votre message *</label>
+          <textarea id="contact-message" name="message" placeholder="Décrivez votre besoin..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">✉️ Envoyer ma demande de devis</button>
+        <p id="form-success" style="display:none;color:#4caf50;font-size:0.88rem;font-weight:500;margin-top:8px;"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo">JCB <span>ÉLECTRICITÉ</span></span>
+        <p>Votre électricien de confiance à Nîmes et dans tout le Gard. Interventions rapides, devis gratuit, qualité garantie.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Nos Services</h4>
+        <a href="#services">Dépannage électrique</a>
+        <a href="#services">Installation électrique</a>
+        <a href="#services">Mise aux normes</a>
+        <a href="#services">Domotique</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+33667693343">+33 6 67 69 33 43</a>
+        <p>273 Chem. du Mas du Diable</p>
+        <p>30000 Nîmes, France</p>
+        <a href="https://maps.google.com/?q=273+Chem.+du+Mas+du+Diable+30000+Nîmes+France" target="_blank" rel="noopener" class="footer-gmaps-link" style="margin-top:12px;">
+          📍 Voir sur Google Maps
+        </a>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>© 2025 JCB ÉLECTRICITÉ — Tous droits réservés</p>
+      <p>Électricien à Nîmes — Gard (30) — SIRET en cours</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button id="scroll-top" aria-label="Retour en haut">↑</button>
+
+<!-- PHONE FLOAT -->
+<div class="phone-float">
+  <a href="tel:+33667693343">
+    <div class="phone-pulse"></div>
+    +33 6 67 69 33 43
+  </a>
+</div>
+
+<script>
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', false);
+  }
+
+  // Scroll to top
+  const scrollTopBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Fade in on scroll (IntersectionObserver)
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  fadeElements.forEach(el => {
+    observer.observe(el);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const navHeight = document.getElementById('navbar').offsetHeight;
+        const targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.25)';
+    } else {
+      navbar.style.boxShadow = '0 2px 12px rgba(0,0,0,0.18)';
+    }
+  });
+
+  // Form submission handler
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit');
+    const successMsg = document.getElementById('form-success');
+    btn.textContent = '✓ Message envoyé !';
+    btn.style.background = '#4caf50';
+    btn.disabled = true;
+    successMsg.textContent = 'Merci ! Nous vous contacterons dans les plus brefs délais.';
+    successMsg.style.display = 'block';
+    setTimeout(() => {
+      btn.textContent = '✉️ Envoyer ma demande de devis';
+      btn.style.background = '';
+      btn.disabled = false;
+      successMsg.style.display = 'none';
+      e.target.reset();
+    }, 5000);
+  }
+</script>
+</body>
+</html>
